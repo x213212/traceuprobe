@@ -152,10 +152,12 @@ while 1:
 ```
 
 注意到
-b.attach_uprobe(name=obj, sym="foo", fn_name="test")
-b.attach_uretprobe(name=obj, sym="foo", fn_name="test2")
+> b.attach_uprobe(name=obj, sym="foo", fn_name="test")
+> b.attach_uretprobe(name=obj, sym="foo", fn_name="test2")
+> 
 參數可以下
-sudo python3 bpftest2.py -O /home/x213212/test3/test
+> sudo python3 bpftest2.py -O /home/x213212/test3/test
+> 
 接obj檔
 ![](https://i.imgur.com/9SLMzHB.png)
 因為普通沒加上偏移量就是對應到foo sym
@@ -170,8 +172,9 @@ sudo python3 bpftest2.py -O /home/x213212/test3/test
 ![](https://i.imgur.com/YVOxSuo.png)
 
 
-real address = base address + offset
- sudo stap uprobe_register.stp 
+> real address = base address + offset
+>  sudo stap uprobe_register.stp 
+
 
 ![](https://i.imgur.com/tFsVLyi.png)
 ![](https://i.imgur.com/Fa0998w.png)
